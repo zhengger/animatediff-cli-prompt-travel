@@ -15,17 +15,18 @@ if [[ ! -d "${models_dir}" ]]; then
 fi
 
 model_urls=(
-    https://civitai.com/api/download/models/78775 # ToonYou
-    https://civitai.com/api/download/models/72396 # Lyriel
-    https://civitai.com/api/download/models/71009 # RcnzCartoon
-    https://civitai.com/api/download/models/79068 # MajicMix
-    https://civitai.com/api/download/models/29460 # RealisticVision
-    https://civitai.com/api/download/models/97261 # Tusun (1/2)
-    https://civitai.com/api/download/models/50705 # Tusun (2/2)
-    https://civitai.com/api/download/models/90115 # FilmVelvia (1/2)
-    https://civitai.com/api/download/models/92475 # FilmVelvia (2/2)
+    https://civitai.com/api/download/models/78775  # ToonYou
+    https://civitai.com/api/download/models/72396  # Lyriel
+    https://civitai.com/api/download/models/71009  # RcnzCartoon
+    https://civitai.com/api/download/models/79068  # MajicMix
+    https://civitai.com/api/download/models/29460  # RealisticVision
+    https://civitai.com/api/download/models/97261  # Tusun (1/2)
+    https://civitai.com/api/download/models/50705  # Tusun (2/2)
+    https://civitai.com/api/download/models/90115  # FilmVelvia (1/2)
+    https://civitai.com/api/download/models/92475  # FilmVelvia (2/2)
     https://civitai.com/api/download/models/102828 # GhibliBackground (1/2)
-    https://civitai.com/api/download/models/57618 # GhibliBackground (2/2)
+    https://civitai.com/api/download/models/57618  # GhibliBackground (2/2)
+    https://civitai.com/api/download/models/143906 # epiCRealism
 )
 
 echo "Downloading model files to ${models_dir}..."
