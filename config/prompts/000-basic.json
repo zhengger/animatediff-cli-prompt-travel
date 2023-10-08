@@ -13,7 +13,7 @@
     "guidance_scale": 4.0,
     "clip_skip": 2,
     "prompt_fixed_ratio": 0.8,
-    "head_prompt": "photo of a ginger woman, detailed eyes, blue eyes",
+    "head_prompt": "photo of a ginger man, detailed eyes, blue eyes",
     "prompt_map": {
         "0": "(upper_body, angry)",
         "16": "(upper_body, smile, from_above)",

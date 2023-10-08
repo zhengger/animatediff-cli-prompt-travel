@@ -6,7 +6,7 @@
     "compile": false,
     "tensor_interpolation_slerp": true,
     "seed": [
-        8547953963516854478
+      5479539636854
     ],
     "scheduler": "euler_a",
     "steps": 20,
@@ -38,7 +38,7 @@
     },
     "motion_lora_map": {},
     "controlnet_map": {
-        "input_image_dir" : "controlnet_image/test00",
+        "input_image_dir" : "controlnet_image/test",
         "max_samples_on_vram" : 200,
         "max_models_on_vram" : 3,
         "save_detectmap" : true,
