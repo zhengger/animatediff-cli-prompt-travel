@@ -1,1 +1,0 @@
-ffmpeg -i %1 -i %2 -filter_complex "[0:v][1:v]hstack=inputs=2[v]" -map "[v]" -crf 15 2horizontal.mp4
