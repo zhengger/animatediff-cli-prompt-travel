@@ -1,0 +1,86 @@
+{
+    "name": "epicrealism",
+    "path": "models/sd/epicrealism_naturalSinRC1VAE.safetensors",
+    "vae_path": "",
+    "motion_module": "models/motion-module/animatediffMotion_v15V2.ckpt",
+    "compile": false,
+    "tensor_interpolation_slerp": true,
+    "seed": [
+        8547953963516854478
+    ],
+    "scheduler": "euler_a",
+    "steps": 20,
+    "guidance_scale": 4.0,
+    "clip_skip": 2,
+    "prompt_fixed_ratio": 0.8,
+    "head_prompt": "photo of a ginger woman, detailed eyes, blue eyes",
+    "prompt_map": {
+        "0": "(upper_body, angry)",
+        "16": "(upper_body, smile, from_above)",
+        "32": "(upper_body, angry, from_side)",
+        "48": "(upper_body, smile, from_below)",
+        "64": "(upper_body, angry, looking at viewer)",
+        "80": "face,looking at viewer",
+        "88": "face,looking at viewer, closed_eyes",
+        "96": "face,looking at viewer, open eyes, open_mouth",
+        "104": "face,looking at viewer, closed_eyes, closed_mouth",
+        "112": "face,looking at viewer, open eyes,eyes, smile, laughing",
+        "120": "face,looking at viewer, blushing, sad face"
+    },
+    "tail_prompt": "",
+    "n_prompt": [
+        "cartoon, painting, illustration, (worst quality, low quality, normal quality:2), (watermark), immature,"
+    ],
+    "is_single_prompt_mode": false,
+    "lora_map": {},
+    "motion_lora_map": {},
+    "ip_adapter_map": {},
+    "controlnet_map": {},
+    "upscale_config": {
+        "scheduler": "ddim",
+        "steps": 20,
+        "strength": 0.5,
+        "guidance_scale": 10,
+        "controlnet_tile": {
+            "enable": true,
+            "controlnet_conditioning_scale": 1.0,
+            "guess_mode": false,
+            "control_guidance_start": 0.0,
+            "control_guidance_end": 1.0
+        },
+        "controlnet_line_anime": {
+            "enable": false,
+            "controlnet_conditioning_scale": 1.0,
+            "guess_mode": false,
+            "control_guidance_start": 0.0,
+            "control_guidance_end": 1.0
+        },
+        "controlnet_ip2p": {
+            "enable": false,
+            "controlnet_conditioning_scale": 0.5,
+            "guess_mode": false,
+            "control_guidance_start": 0.0,
+            "control_guidance_end": 1.0
+        },
+        "controlnet_ref": {
+            "enable": false,
+            "use_frame_as_ref_image": false,
+            "use_1st_frame_as_ref_image": false,
+            "ref_image": "ref_image/path_to_your_ref_img.jpg",
+            "attention_auto_machine_weight": 1.0,
+            "gn_auto_machine_weight": 1.0,
+            "style_fidelity": 0.25,
+            "reference_attn": true,
+            "reference_adain": false
+        }
+    },
+    "stylize_config": {},
+    "output": {
+        "format": "mp4",
+        "fps": 8,
+        "encode_param": {
+            "crf": 10
+        }
+    },
+    "result": {}
+}
