@@ -244,7 +244,7 @@ def generate(
             help="Directory for output folders (frames, gifs, etc)",
             rich_help_panel="Output",
         ),
-    ] = Path("/content/drive/MyDrive/Animatediff/output/"),
+    ] = Path("/content/drive/MyDrive/Animatediff/Output"),
     # change from output to /content/drive/MyDrive/Animatediff/output
     no_frames: Annotated[
         bool,
@@ -1053,6 +1053,7 @@ def refine(
     # get a timestamp for the output directory
     time_str = datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
     # make the output directory
+    out_dir = Path("/content/drive/MyDrive/Animatediff/Output")
     save_dir = out_dir.joinpath(f"{time_str}-{model_config.save_name}")
     save_dir.mkdir(parents=True, exist_ok=True)
     logger.info(f"Will save outputs to ./{path_from_cwd(save_dir)}")
