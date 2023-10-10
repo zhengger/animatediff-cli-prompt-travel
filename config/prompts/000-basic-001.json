@@ -1,0 +1,86 @@
+{
+    "name": "epicrealism",
+    "path": "models/sd/epicrealism_naturalSinRC1VAE.safetensors",
+    "vae_path": "",
+    "motion_module": "models/motion-module/animatediffMotion_v15V2.ckpt",
+    "compile": false,
+    "tensor_interpolation_slerp": true,
+    "seed": [
+        8547953963516854478
+    ],
+    "scheduler": "euler_a",
+    "steps": 20,
+    "guidance_scale": 4.0,
+    "clip_skip": 2,
+    "prompt_fixed_ratio": 0.8,
+    "head_prompt": "(8k resolution), (Millie Bobby Brown) with (silver hair), detailed facial features, Black cat suit, chrome texture, cybernetic arms, gloves, claws, Cyberpunk city, (NEON), CYBERPUNK, cinematic lighting, reflections, best quality masterpiece, HDR",
+    "prompt_map": {
+      "0": "upper_body, open_eyes, closed_mouth",
+      "16": "upper_body, closed_eyes, closed_mouth",
+      "32": "upper_body, open_eyes, closed_mouth",
+      "48": "upper_body, closed_eyes, closed_mouth",
+      "64": "upper_body, open_eyes, closed_mouth",
+      "80": "upper_body, closed_eyes, closed_mouth",
+      "88": "upper_body,  open_eyes, smile",
+      "96": "upper_body, open_eyes, smile, happy",
+      "104": "upper_body, closed_eyes, closed_mouth",
+      "112": "upper_body, open_eyes",
+      "120": "upper_body, open_eyes"
+    },
+    "tail_prompt": "",
+    "n_prompt": [
+        "(8k resolution), (Millie Bobby Brown) with (silver hair), detailed facial features, Black cat suit, chrome texture, cybernetic arms, gloves, claws, Cyberpunk city, (NEON), CYBERPUNK, cinematic lighting, reflections, best quality masterpiece, HDR"
+    ],
+    "is_single_prompt_mode": false,
+    "lora_map": {},
+    "motion_lora_map": {},
+    "ip_adapter_map": {},
+    "controlnet_map": {},
+    "upscale_config": {
+        "scheduler": "ddim",
+        "steps": 20,
+        "strength": 0.5,
+        "guidance_scale": 10,
+        "controlnet_tile": {
+            "enable": true,
+            "controlnet_conditioning_scale": 1.0,
+            "guess_mode": false,
+            "control_guidance_start": 0.0,
+            "control_guidance_end": 1.0
+        },
+        "controlnet_line_anime": {
+            "enable": false,
+            "controlnet_conditioning_scale": 1.0,
+            "guess_mode": false,
+            "control_guidance_start": 0.0,
+            "control_guidance_end": 1.0
+        },
+        "controlnet_ip2p": {
+            "enable": false,
+            "controlnet_conditioning_scale": 0.5,
+            "guess_mode": false,
+            "control_guidance_start": 0.0,
+            "control_guidance_end": 1.0
+        },
+        "controlnet_ref": {
+            "enable": false,
+            "use_frame_as_ref_image": false,
+            "use_1st_frame_as_ref_image": false,
+            "ref_image": "ref_image/path_to_your_ref_img.jpg",
+            "attention_auto_machine_weight": 1.0,
+            "gn_auto_machine_weight": 1.0,
+            "style_fidelity": 0.25,
+            "reference_attn": true,
+            "reference_adain": false
+        }
+    },
+    "stylize_config": {},
+    "output": {
+        "format": "mp4",
+        "fps": 8,
+        "encode_param": {
+            "crf": 10
+        }
+    },
+    "result": {}
+}

@@ -286,7 +286,10 @@ Almost same as the original animatediff-cli, but with a slight change in config 
 
 ```sh
 cd animatediff-cli
-venv\Scripts\activate.bat
+python3 -m venv venv
+venv\Scripts\activate.bat // windows
+source venv/bin/activate // linux/mac
+
 
 # with this setup, it took about a minute to generate in my environment(RTX4090). VRAM usage was 6-7 GB
 # width 256 / height 384 / length 128 frames / context 16 frames

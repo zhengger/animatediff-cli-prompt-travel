@@ -244,8 +244,8 @@ def generate(
             help="Directory for output folders (frames, gifs, etc)",
             rich_help_panel="Output",
         ),
-    # ] = Path("output"),
-    ] = Path("/content/drive/MyDrive/Animatediff/output"),
+    ] = Path("output"),
+    # ] = Path("/content/drive/MyDrive/Animatediff/output"),
     # change from output to /content/drive/MyDrive/Animatediff/output
     no_frames: Annotated[
         bool,

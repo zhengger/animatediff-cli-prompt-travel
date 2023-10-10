@@ -27,6 +27,8 @@ model_urls=(
     https://civitai.com/api/download/models/102828 # GhibliBackground (1/2)
     https://civitai.com/api/download/models/57618  # GhibliBackground (2/2)
     https://civitai.com/api/download/models/143906 # epiCRealism
+    https://civitai.com/api/download/models/21839  # citrinedreammix_v11BakedVAE
+    https://civitai.com/api/download/models/142161 # astreapixieMix_v16
 )
 
 echo "Downloading model files to ${models_dir}..."
