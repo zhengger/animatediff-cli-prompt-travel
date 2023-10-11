@@ -1,0 +1,90 @@
+{
+  "name": "epicrealism",
+  "path": "models/sd/citrinedreammix_v11BakedVAE.safetensors",
+  "vae_path": "",
+  "motion_module": "models/motion-module/animatediffMotion_v15V2.ckpt",
+  "compile": false,
+  "tensor_interpolation_slerp": true,
+  "seed": [
+      8547953963516854478
+  ],
+  "scheduler": "k_dpmpp_2m",
+  "steps": 30,
+  "guidance_scale": 4.0,
+  "clip_skip": 2,
+  "prompt_fixed_ratio": 0.8,
+  "head_prompt": "(masterpiece, best quality:1.2), cowboy shot, solo, 1girl, kusanagi motoko, expressionless, closed mouth, looking at viewer, crossed arms, jacket, leotard, thighhighs, gloves, cleavage",
+  "prompt_map": {
+      "0": "face,looking at viewer, open_eyes, closed_mouth",
+      "32": "face,looking at viewer, open_eyes, closed_mouth",
+      "64": "face,looking at viewer, open_eyes, closed_mouth",
+      "96": "face,looking at viewer, open_eyes, smile, happy",
+      "120": "face,looking at viewer, open_eyes"
+  },
+  "tail_prompt": "",
+  "n_prompt": [
+      "easynegative, badhandv4, (worst quality, low quality:1.4), greyscale, border, artist name, out of frame, zombie"
+  ],
+  "is_single_prompt_mode": false,
+  "lora_map": {
+      "loras/add_detail.safetensors" : 1.0,
+      "loras/ghostintheshell_kusanagi_sac-10" : 1.0
+  },
+  "ip_adapter_map": {
+      "enable": true,
+      "input_image_dir": "ip_adapter_image/test00",
+      "save_input_image": true,
+      "scale": 0.5,
+      "is_plus_face": true,
+      "is_plus": true
+  },
+  "motion_lora_map": {},
+  "controlnet_map": {},
+  "upscale_config": {
+      "scheduler": "ddim",
+      "steps": 20,
+      "strength": 0.5,
+      "guidance_scale": 10,
+      "controlnet_tile": {
+          "enable": true,
+          "controlnet_conditioning_scale": 1.0,
+          "guess_mode": false,
+          "control_guidance_start": 0.0,
+          "control_guidance_end": 1.0
+      },
+      "controlnet_line_anime": {
+          "enable": false,
+          "controlnet_conditioning_scale": 1.0,
+          "guess_mode": false,
+          "control_guidance_start": 0.0,
+          "control_guidance_end": 1.0
+      },
+      "controlnet_ip2p": {
+          "enable": false,
+          "controlnet_conditioning_scale": 0.5,
+          "guess_mode": false,
+          "control_guidance_start": 0.0,
+          "control_guidance_end": 1.0
+      },
+      "controlnet_ref": {
+          "enable": false,
+          "use_frame_as_ref_image": false,
+          "use_1st_frame_as_ref_image": false,
+          "ref_image": "ref_image/path_to_your_ref_img.jpg",
+          "attention_auto_machine_weight": 1.0,
+          "gn_auto_machine_weight": 1.0,
+          "style_fidelity": 0.25,
+          "reference_attn": true,
+          "reference_adain": false
+      }
+  },
+  "stylize_config": {},
+  "output": {
+      "format": "mp4",
+      "fps": 8,
+      "encode_param": {
+          "crf": 10
+      }
+  },
+  "result": {}
+}
